@@ -105,4 +105,4 @@ An example of the prediction result file is shown in the chart
 
 ## Contact
 
-All problems please contact WTHMDA development team: **Xiaoquan Su**    Email: [suxq@qdu.edu.cn](mailto:suxq@qdu.edu.cn)
+All problems please contact ModulePred development team: **Xiaoquan Su**    Email: [suxq@qdu.edu.cn](mailto:suxq@qdu.edu.cn)
