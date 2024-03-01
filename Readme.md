@@ -4,7 +4,7 @@
 
 - <u>[Introduction](#Introduction)</u>
 
-- <u>[Package requirement](#Package requirement)</u>
+- <u>[Package requirement](#Package)</u>
 
 - <u>[Installation](#Installation)</u>
 
@@ -18,7 +18,7 @@
 
 In this study, a deep learning framework called ModulePred was introduced to predict disease gene associations. Module Pred uses the L3 link prediction algorithm to graphically enhance protein interaction networks. It integrates disease gene associations, constructs heterogeneous module network complexes with proteins, and enhances protein interactions, and develops a new heterogeneous module network graph embedding. Improved the performance of predicting the correlation between diseases and genes
 
-## Package requirement
+## Package
 
 torch==1.13.1
 
