@@ -81,7 +81,7 @@ For the original data set in this demo, you can run the program with one click t
 
 ### Network Diagram
 
-<img src="file:///C:/Users/Administrator/%E6%A1%8C%E9%9D%A2/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240301142822.png" title="" alt="" style="zoom:33%;">
+<img src="file:///C:/Users/Administrator/%E6%A1%8C%E9%9D%A2/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240301142822.png" title="a" alt="a" style="zoom:33%;">
 
 For convenience, you can run the processes above by running the run.sh in folder '/ModulePred'.
 
@@ -106,3 +106,5 @@ An example of the prediction result file is shown in the chart
 ## Contact
 
 All problems please contact WTHMDA development team: **Xiaoquan Su**    Email: [suxq@qdu.edu.cn](mailto:suxq@qdu.edu.cn)
+
+
