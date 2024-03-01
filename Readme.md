@@ -35,7 +35,7 @@ scikit-learn==1.0.2
 ## Installation
 
 ```
-cd process
+cd ModulePred
 sh init.sh
 ```
 
@@ -83,10 +83,10 @@ For the original data set in this demo, you can run the program with one click t
 
 <img src="file:///C:/Users/Administrator/%E6%A1%8C%E9%9D%A2/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240301142822.png" title="" alt="" style="zoom:33%;">
 
-For convenience, you can run the processes above by running the run.sh in folder 'process/'.
+For convenience, you can run the processes above by running the run.sh in folder '/ModulePred'.
 
 ```
-cd process
+cd ModulePred
 chmod a+x run.sh
 ./run.sh
 ```
