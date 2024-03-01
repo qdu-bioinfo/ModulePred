@@ -4,7 +4,7 @@
 
 - <u>[Introduction](#Introduction)</u>
 
-- <u>[Package requirement](#ackage requirement)</u>
+- <u>[Package requirement](#Package requirement)</u>
 
 - <u>[Installation](#Installation)</u>
 
