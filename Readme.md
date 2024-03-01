@@ -4,13 +4,13 @@
 
 - <u>[Introduction](#Introduction)</u>
 
-- <u>[Package requirement](#Package)</u>
+- <u>[Package](#Package)</u>
 
 - <u>[Installation](#Installation)</u>
 
 - <u>[Data](#Data)</u>
 
-- <u>[Model training and prediction](#Model training and prediction)</u>
+- <u>[Training](#Training)</u>
 
 - <u>[Contact](#Contact)</u>
 
@@ -74,7 +74,7 @@ d.gene_disease.csv (The connection between disease and genes)
 | d0      | g1   |
 | d0      | g2   |
 
-Model training and prediction
+Training
 -----------------------------
 
 For the original data set in this demo, you can run the program with one click through the configured .sh file to generate a model prediction file.Through graph training, the score of possible connections between disease node d0 and gene nodes g4, g5, g6, g7, g8, and g9 is obtained.
