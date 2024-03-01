@@ -86,7 +86,7 @@ For the original data set in this demo, you can run the program with one click t
 For convenience, you can run the processes above by running the run.sh in folder '/ModulePred'.
 
 ```
-cd ModulePred
+cd ModulePred-main
 chmod a+x run.sh
 ./run.sh
 ```
