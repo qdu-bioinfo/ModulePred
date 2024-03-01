@@ -81,7 +81,7 @@ For the original data set in this demo, you can run the program with one click t
 
 ### Network Diagram
 
-<img title="img" src="file:///C:/Users/Administrator/%E6%A1%8C%E9%9D%A2/ModulePred/img.png" alt="img" style="zoom:33%;">
+![image](https://github.com/qdu-bioinfo/ModulePred/blob/main/img.png)
 
 For convenience, you can run the processes above by running the run.sh in folder '/ModulePred'.
 
