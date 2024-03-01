@@ -41,7 +41,7 @@ sh init.sh
 
 ## Data
 
-In this demo, we constructed a virtual dataset to run the program example normally. The original dataset is stored in the /data/raw_data directory.
+In this demo, we constructed a virtual dataset to run the program example normally. The original dataset is stored in the /data/raw_data directory
 a.    gene_gene.csv (The correlation between genes in a network diagram)
 
 | gene1 | gene2 |
