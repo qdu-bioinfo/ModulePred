@@ -1,0 +1,5 @@
+disease,gene,index
+d0,g0,train
+d0,g1,train
+d0,g2,train
+d0,g3,train
