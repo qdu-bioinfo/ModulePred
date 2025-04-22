@@ -1,6 +1,0 @@
-torch==1.13.1
-dgl==1.1.2
-gensim==4.2.0
-tqdm==4.64.1
-node2vec==0.4.3
-scikit-learn==1.0.2
