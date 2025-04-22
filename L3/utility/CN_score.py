@@ -12,15 +12,14 @@ from tqdm import tqdm
 def CN(args):
     print('-----------------Run CN program-----------------')
     edges = pd.read_csv(args.edges_route)
-    A = np.zeros((29, 29))
+    A = np.zeros((15964, 15964))
 
 
     for i,row in edges.iterrows():
 
         A[row[0],row[1]] = 1
         A[row[1],row[0]] = 1
-    #   邻接矩阵自身乘以自身，构造幂邻接矩阵
-    #   幂邻接矩阵的元素(i, j)表示从节点 i 到节点 j 有多少条长度为 n 的路径，其中 n 是幂的次数。
+
     A2 = np.matmul(A, A)
 
     indices_A2 = np.argwhere(np.triu(A2, k=1) > 0).tolist()
@@ -42,7 +41,7 @@ def CN(args):
 
     indices = np.argwhere(np.triu(A3, k=1) > 0).tolist()
 
-    # 创建1阶邻居字典
+
     result_L1 = {}
     for i in tqdm(range(len(A))):
         for j in range(len(A)):
@@ -69,7 +68,7 @@ def CN(args):
     for i in tqdm(pairs_L3):
         score.append(A3[i[0]][i[1]])
 
-    #   num 代表有多少条长度为3的路径
+
     the_df['num'] = score
     the_df.columns = ['node1', 'node2', 'num']
     the_df.to_csv(args.pairs_L3_route, index = False)
@@ -79,17 +78,16 @@ def CN(args):
     data2 = data['node2'].tolist()
     pairs_L3 = list(zip(data1, data2))
 
-    #   ls_sum代表每个每个距离最小为3的节点对中，节点对通路中包含的所有节点
-    ls_sum = []
-    for i in tqdm(pairs_L3):  # 对应第一列即可
 
-        s1 = result_L1[i[0]] | result_L1[i[1]]  # 从距离最小为3的节点对中，找出两个节点的一阶邻居
-        # print(s1)
+    ls_sum = []
+    for i in tqdm(pairs_L3):
+
+        s1 = result_L1[i[0]] | result_L1[i[1]]
 
         s3 = set()
-        # 遍历第一个节点的一阶邻居
+
         for j in result_L1[i[0]]:
-            # 取出第一个节点每个一阶邻居的一节邻居与s1的交集
+
             s2 = result_L1[j] & s1
             s2.add(j)
             if len(s2) != 1:

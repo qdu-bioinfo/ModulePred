@@ -12,13 +12,13 @@ def candidate(args):
 
     node_1_sum = list(set(data_AA['node1'].tolist()))
 
-    #   AA的选取
+
     data_AA['rank_g'] = data_AA.groupby(['node1'])['AA'].rank(ascending = False, method = 'first')
     new_AA = data_AA[data_AA['rank_g'] <= 10]
-    #   RA的选取
+
     data_RA['rank_g'] = data_RA.groupby(['node1'])['RA'].rank(ascending = False, method = 'first')
     new_RA = data_RA[data_RA['rank_g'] <= 10]
-    #   CN的选取
+
     data_CN['rank_g'] = data_CN.groupby(['node1'])['num'].rank(ascending = False, method = 'first')
     new_CN = data_CN[data_CN['rank_g'] <= 10]
 
@@ -41,10 +41,22 @@ def candidate(args):
     _csv = pd.DataFrame(all_edges)
     _csv.columns = ['gene1', 'gene2']
 
-    #   进行映射-还原
-    f = open(args.gene_num_return_dict,'r')
-    gene_dict_return = eval(f.read())
-    f.close()
+    def load_reverse_dict(reverse_dict_file):
+        id_to_gene = {}
+        with open(reverse_dict_file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    parts = line.split()
+                    if len(parts) >= 2:
+                        gene_id = int(parts[0])
+                        gene_name = ' '.join(parts[1:])
+                        id_to_gene[gene_id] = gene_name
+        return id_to_gene
+
+
+    gene_dict_return = load_reverse_dict("./Output/gene_num_return_dict.txt")
+
 
     _csv['gene1'] = _csv.apply(lambda x: f2(x['gene1'], gene_dict_return), axis=1)
     _csv['gene2'] = _csv.apply(lambda x: f2(x['gene2'], gene_dict_return), axis=1)

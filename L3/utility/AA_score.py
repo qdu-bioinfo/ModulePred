@@ -7,7 +7,7 @@ def AA(args):
     print('----------------- Run AA program-----------------')
     edges = pd.read_csv(args.edges_route)
 
-    A = np.zeros((29, 29))
+    A = np.zeros((15964, 15964))
     for i,row in edges.iterrows():
 
         A[row[0],row[1]] = 1
@@ -16,7 +16,6 @@ def AA(args):
     data = pd.read_csv(args.path_L3_route)
     path = data['path'].tolist()
 
-    #   计算得分
     aa_list = []
     for nei in tqdm(path):
         aa_sim = 0

@@ -4,20 +4,19 @@ import pandas as pd
 from tqdm import tqdm
 
 
-# path_L3_RA:'../data/path_L3_RA.csv'
 
 def RA(args):
     print('----------------- Run RA program-----------------')
     edges = pd.read_csv(args.edges_route)
 
-    #   构造邻接矩阵
-    A = np.zeros((29, 29))
+
+    A = np.zeros((15964, 15964))
     for i,row in edges.iterrows():
 
         A[row[0],row[1]] = 1
         A[row[1],row[0]] = 1
 
-    #   创建1阶邻居字典
+
     result_L1 = {}
     for i in tqdm(range(len(A))):
         for j in range(len(A)):
@@ -30,12 +29,11 @@ def RA(args):
     data = pd.read_csv(args.pairs_L3_route)
     data1 = data['node1'].tolist()
     data2 = data['node2'].tolist()
-    pairs_L3 = list(zip(data1, data2))  # pairs_L3是距离为三的节点组合
+    pairs_L3 = list(zip(data1, data2))
 
 
-    #   ls_sum代表每个每个距离最小为3的节点对中，节点对通路中包含的所有节点
     ls_sum = []
-    for i in tqdm(pairs_L3):  # 对应第一列即可
+    for i in tqdm(pairs_L3):
         s1 = result_L1[i[0]] | result_L1[i[1]]
         s3 = set()
         for j in result_L1[i[0]]:
@@ -53,7 +51,7 @@ def RA(args):
     path = data['path'].tolist()
 
     ra_list = []
-    #   计算得分
+
     for nei in tqdm(path):
         ra_sim = 0
         for index, node in enumerate(eval(nei)):
