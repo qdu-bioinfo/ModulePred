@@ -11,11 +11,11 @@
             </JupyterConnectionParameters>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../other/.idea/other.iml">
+        <entry key="$PROJECT_DIR$/.idea/ModulePred_2025_v0.8.iml">
           <value>
             <JupyterConnectionParameters>
               <option name="managed" value="true" />
-              <option name="sdkHomePath" value="C:\Users\Administrator\anaconda3\envs\my\python.exe" />
+              <option name="sdkName" value="Python 3.9 (mypytorch)" />
             </JupyterConnectionParameters>
           </value>
         </entry>
