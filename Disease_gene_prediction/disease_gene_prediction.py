@@ -193,7 +193,7 @@ _dict_d = eval(f.read())
 f.close()
 
 
-
+# %%
 target_diseases = pd.read_csv('../data/target_diseases.csv', header=None)
 data_dg = pd.read_csv('./Input/dis_gene_edges_new_num.csv')
 print(data_dg['gene'].min())
